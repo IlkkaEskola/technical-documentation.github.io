@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>C# Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Get_started">Get started</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Comments">Comments</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Variables">Variables</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#User_input">User input</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Strings">Strings</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Booleans">Booleans</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#if...else_statements">if...else statements</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#while_loop">while loop</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Reference">Reference</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            C# is an object-oriented programming language created by Microsoft that runs on the .NET Framework. C# has roots from the C family, and the language is close to other popular languages like C++ and Java. The first version was released in year 2002. The latest version, C# 12, was released in November 2023.
+          </p>
+          <p>
+            C# is used for:
+          </p>
+          <ul>
+            <li>Mobile applications</li>
+            <li>Desktop applications</li>
+            <li>Web applications</li>
+            <li>Web services</li>
+            <li>Web sites</li>
+            <li>Games</li>
+            <li>VR</li>
+            <li>Database applications</li>
+            <li>And much, much more!</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Get_started">
+        <header>Get started</header>
+        <article>
+          <p>The easiest way to get started with C# is to use an IDE.
+An IDE (Integrated Development Environment) is used to edit and compile code. Applications written in C# use the .NET Framework, so it makes sense to use Visual Studio, as the program, the framework, and the language, are all created by Microsoft.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Comments">
+        <header>Comments</header>
+        <article>
+          <p>
+            Comments can be used to explain C# code, and to make it more readable. It can also be used to prevent execution when testing alternative code.
+          </p>
+          <p>
+            Single-line comments start with two forward slashes (//).
+Any text between // and the end of the line is ignored by C# (will not be executed). <p>This example uses a single-line comment before a line of code:</p>
+            <code>// This is a comment
+Console.WriteLine("Hello World!");</code>
+          </p>
+          <p>
+            This example uses a single-line comment at the end of a line of code:
+          </p>
+          <code>Console.WriteLine("Hello World!");  // This is a comment</code>
+          <p>
+            Multi-line comments start with /* and ends with */.<br>
+Any text between /* and */ will be ignored by C#.
+<p>This example uses a multi-line comment (a comment block) to explain the code:</p>
+          </p>
+          <code>/* The code below will print the words Hello World
+to the screen, and it is amazing */
+Console.WriteLine("Hello World!");</code>
+        </article>
+      </section>
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <article>
+          <p>
+            Variables are containers for storing data values. In C#, there are different types of variables (defined with different keywords), for example:
+          </p>
+          <ul>
+            <li>int - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+            <li>double - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+            <li>char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+            <li>string - stores text, such as "Hello World". String values are surrounded by double quotes</li>
+            <li>bool - stores values with two states: true or false</li>
+          </ul>
+          <p>
+            To create a variable, you must specify the type and assign it a value:
+          </p>
+          <code>type variableName = value;</code>
+          <p>
+            Where type is a C# type (such as int or string), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable.
+<p>To create a variable that should store text, look at the following example:</p>
+<code>string name = "John";
+Console.WriteLine(name);</code>
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="User_input">
+        <header>User input</header>
+        <article>
+          <p>
+            You have already learned that Console.WriteLine() is used to output (print) values. Now we will use Console.ReadLine() to get user input.
+          </p>
+          <p>
+            In the following example, the user can input his or hers username, which is stored in the variable userName. Then we print the value of userName:
+          </p>
+          <code>// Type your username and press enter
+Console.WriteLine("Enter username:");
+
+// Create a string variable and get user input from the keyboard and store it in the variable
+string userName = Console.ReadLine();
+
+// Print the value of the variable (userName), which will display the input value
+Console.WriteLine("Username is: " + userName);</code>
+        </article>
+      </section>
+      <section class="main-section" id="Strings">
+        <header>Strings</header>
+        <article>
+          <p>
+            Strings are used for storing text.
+          </p>
+          <p>
+            A string variable contains a collection of characters surrounded by double quotes:
+          </p>
+          <code>string greeting = "Hello";</code>
+          <p>
+            A string variable can contain many words, if you want:
+          </p>
+          <code>string greeting2 = "Nice to meet you!";</code>
+          <p>
+            A string in C# is actually an object, which contain properties and methods that can perform certain operations on strings. For example, the length of a string can be found with the Length property:
+            <code>string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+Console.WriteLine("The length of the txt string is: " + txt.Length);</code>
+            <p>
+              There are many string methods available, for example ToUpper() and ToLower(), which returns a copy of the string converted to uppercase or lowercase:
+            </p>
+            <code>string txt = "Hello World";
+Console.WriteLine(txt.ToUpper());   // Outputs "HELLO WORLD"
+Console.WriteLine(txt.ToLower());   // Outputs "hello world"</code>
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Booleans">
+        <header>Booleans</header>
+        <article>
+          <p>
+            Very often, in programming, you will need a data type that can only have one of two values, like:
+          </p>
+          <ul>
+            <li>YES / NO</li>
+            <li>ON / OFF</li>
+            <li>TRUE / FALSE</li>
+          </ul>
+          <p>
+            For this, C# has a bool data type, which can take the values true or false.
+          </p>
+          <p>
+            A boolean type is declared with the bool keyword and can only take the values true or false:
+            <code>bool isCSharpFun = true;
+bool isFishTasty = false;
+Console.WriteLine(isCSharpFun);   // Outputs True
+Console.WriteLine(isFishTasty);   // Outputs False</code>
+          </p>
+        </article>
+      </section>
+      <Section class="main-section" id="if...else_statements">
+        <header>if...else statements</header>
+        <article>
+          <p>
+            C# supports the usual logical conditions from mathematics:
+          </p>
+          <ul>
+            <li>
+              Less than: a < b
+            </li>
+            <li>Less than or equal to: a <= b
+            </li>
+            <li>Greater than: a > b
+
+            </li>
+            <li>Greater than or equal to: a >= b
+
+            </li>
+            <li>Equal to a == b
+
+            </li>
+            <li>Not Equal to: a != b
+
+            </li>
+          </ul>
+          <p>
+            You can use these conditions to perform different actions for different decisions.
+          </p>
+          <p>
+            C# has the following conditional statements:
+          </p>
+          <ul>
+            <li>Use if to specify a block of code to be executed, if a specified condition is true</li>
+            <li>Use else to specify a block of code to be executed, if the same condition is false</li>
+            <li>Use else if to specify a new condition to test, if the first condition is false</li>
+            <li>Use switch to specify many alternative blocks of code to be executed</li>
+          </ul>
+          <p>
+            Use the if statement to specify a block of C# code to be executed if a condition is True.
+          </p>
+          <code>if (condition) 
+{
+  // block of code to be executed if the condition is True
+}</code>
+          <p>
+            In the example below, we test two values to find out if 20 is greater than 18. If the condition is True, print some text:
+          </p>
+          <code>if (20 > 18) 
+{
+  Console.WriteLine("20 is greater than 18");
+}</code>
+        </article>
+      </section>
+      <section class="main-section" id="while_loop">
+        <header>while loop</header>
+        <article>
+          <p>
+            Loops can execute a block of code as long as a specified condition is reached. Loops are handy because they save time, reduce errors, and they make code more readable.
+          </p>
+          <p>
+            The while loop loops through a block of code as long as a specified condition is True:
+          </p>
+          <code>while (condition) 
+{
+  // code block to be executed
+}</code>
+<p>
+  In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:
+</p>
+<code>int i = 0;
+while (i < 5) 
+{
+  Console.WriteLine(i);
+  i++;
+}</code>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              <a href="https://www.w3schools.com/cs/index.php" target="_blank">w3schools</a>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
